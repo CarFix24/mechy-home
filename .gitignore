@@ -25,3 +25,4 @@ Thumbs.db
 # Elastic Beanstalk
 .elasticbeanstalk/*.cfg.yml
 .elasticbeanstalk/*.global.yml
+.elasticbeanstalk/app_versions/
