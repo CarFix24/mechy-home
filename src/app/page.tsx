@@ -44,7 +44,7 @@ export default function Home() {
                 className="flex flex-col sm:flex-row gap-3 max-w-2xl"
               >
                 <input type="hidden" name="_subject" value="CarFix24 Waitlist Signup" />
-                <div className="w-36 shrink-0 bg-surface-container-low rounded-xl px-4 py-3 flex items-center focus-within:ring-2 ring-primary/40 transition-all">
+                <div className="w-44 shrink-0 bg-surface-container-low rounded-xl px-4 py-3 flex items-center focus-within:ring-2 ring-primary/40 transition-all">
                   <span className="material-symbols-outlined text-outline mr-2 text-base">person</span>
                   <select
                     name="user_type"
