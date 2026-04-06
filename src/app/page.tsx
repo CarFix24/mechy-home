@@ -41,10 +41,10 @@ export default function Home() {
                 id="waitlist"
                 action={FORMSPREE_URL}
                 method="POST"
-                className="flex flex-col sm:flex-row gap-3 max-w-lg"
+                className="flex flex-col sm:flex-row gap-3 max-w-2xl"
               >
                 <input type="hidden" name="_subject" value="CarFix24 Waitlist Signup" />
-                <div className="min-w-[9rem] bg-surface-container-low rounded-xl px-4 py-2 flex items-center focus-within:ring-2 ring-primary/40 transition-all">
+                <div className="w-36 shrink-0 bg-surface-container-low rounded-xl px-4 py-3 flex items-center focus-within:ring-2 ring-primary/40 transition-all">
                   <span className="material-symbols-outlined text-outline mr-2 text-base">person</span>
                   <select
                     name="user_type"
@@ -54,7 +54,7 @@ export default function Home() {
                     <option value="mechanic">Mechanic</option>
                   </select>
                 </div>
-                <div className="flex-grow bg-surface-container-low rounded-xl px-4 py-2 flex items-center focus-within:ring-2 ring-primary/40 transition-all">
+                <div className="flex-1 bg-surface-container-low rounded-xl px-4 py-3 flex items-center focus-within:ring-2 ring-primary/40 transition-all">
                   <span className="material-symbols-outlined text-outline mr-3">mail</span>
                   <input
                     className="bg-transparent border-none focus:ring-0 w-full text-on-surface placeholder:text-outline font-medium outline-none"
@@ -66,7 +66,7 @@ export default function Home() {
                 </div>
                 <button
                   type="submit"
-                  className="kinetic-gradient text-on-primary px-8 py-4 rounded-xl font-bold font-headline shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform active:scale-95 whitespace-nowrap flex items-center justify-center gap-2"
+                  className="kinetic-gradient text-on-primary px-5 py-3 rounded-xl font-bold font-headline shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform active:scale-95 whitespace-nowrap flex items-center justify-center gap-1.5 shrink-0"
                 >
                   Join Waitlist
                   <span className="material-symbols-outlined text-base">arrow_forward</span>
