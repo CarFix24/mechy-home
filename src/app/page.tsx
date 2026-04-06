@@ -38,6 +38,7 @@ export default function Home() {
 
               {/* Waitlist Form */}
               <form
+                id="waitlist"
                 action={FORMSPREE_URL}
                 method="POST"
                 className="flex flex-col sm:flex-row gap-3 max-w-lg"
@@ -289,8 +290,7 @@ export default function Home() {
                 <p className="text-primary-fixed/80">Be the first to experience the future of auto repair.</p>
               </div>
               <a
-                href="#"
-                onClick={(e) => { e.preventDefault(); document.querySelector('form')?.scrollIntoView({ behavior: 'smooth' }); }}
+                href="#waitlist"
                 className="z-10 bg-surface text-primary px-10 py-4 rounded-xl font-black font-headline shadow-xl hover:bg-surface-container-lowest transition-all scale-100 hover:scale-105 active:scale-95"
               >
                 GET EARLY ACCESS
