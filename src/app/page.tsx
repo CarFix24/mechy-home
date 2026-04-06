@@ -278,6 +278,27 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Social Proof / St. Louis Section */}
+        <section className="py-24 px-6 border-t border-outline-variant/10">
+          <div className="max-w-7xl mx-auto flex flex-col items-center">
+            <p className="text-sm font-bold font-label tracking-[0.2em] text-outline uppercase mb-12">Expanding Nationwide</p>
+            <div className="p-8 md:p-12 bg-primary text-on-primary rounded-[3rem] w-full flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+              <div className="z-10 text-center md:text-left">
+                <h3 className="text-3xl md:text-4xl font-black font-headline mb-2 leading-tight">Coming to St. Louis soon.</h3>
+                <p className="text-primary-fixed/80">Be the first to experience the future of auto repair.</p>
+              </div>
+              <a
+                href="#"
+                onClick={(e) => { e.preventDefault(); document.querySelector('form')?.scrollIntoView({ behavior: 'smooth' }); }}
+                className="z-10 bg-surface text-primary px-10 py-4 rounded-xl font-black font-headline shadow-xl hover:bg-surface-container-lowest transition-all scale-100 hover:scale-105 active:scale-95"
+              >
+                GET EARLY ACCESS
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* How It Works — 4 Steps */}
         <section className="py-24 px-6 bg-surface-container-low">
           <div className="max-w-7xl mx-auto">
