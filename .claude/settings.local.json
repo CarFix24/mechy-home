@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@14 . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-git)",
+      "Read(//c/cf24/**)",
+      "Bash(npx create-next-app@14 mechy-home-scaffold --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-git)",
+      "Bash(rsync -av --exclude='.git' mechy-home-scaffold/ mechy-home/)",
+      "Bash(for f:*)",
+      "Bash(do cp:*)",
+      "Bash(done)",
+      "Bash(cp -r src /c/cf24/mechy-home/)",
+      "Bash(npm run:*)",
+      "Bash(npm install:*)",
+      "Bash(cmd /c \"rd /s /q C:\\\\cf24\\\\mechy-home\\\\node_modules\")",
+      "Bash(powershell -Command \"Remove-Item -Recurse -Force ''C:\\\\cf24\\\\mechy-home\\\\node_modules'' -ErrorAction SilentlyContinue; Write-Output ''done''\")",
+      "Bash(powershell -Command \"Get-ChildItem ''C:\\\\cf24\\\\mechy-home\\\\node_modules'' -Force | Remove-Item -Recurse -Force -ErrorAction SilentlyContinue; Remove-Item ''C:\\\\cf24\\\\mechy-home\\\\node_modules'' -Force -ErrorAction SilentlyContinue; Write-Output ''done''\")",
+      "Bash(npx --yes rimraf node_modules)",
+      "Bash(mkdir -p /c/cf24/mechy-home-fresh)",
+      "Bash(cp -r /c/cf24/mechy-home/src /c/cf24/mechy-home-fresh/)",
+      "Bash(cp -r /c/cf24/mechy-home/.elasticbeanstalk /c/cf24/mechy-home-fresh/)",
+      "Bash(cp -r /c/cf24/mechy-home/docs /c/cf24/mechy-home-fresh/)",
+      "Bash(powershell -Command \"Remove-Item -Recurse -Force ''C:\\\\cf24\\\\mechy-home'' -ErrorAction SilentlyContinue; Rename-Item ''C:\\\\cf24\\\\mechy-home-fresh'' ''mechy-home''; Write-Output ''done''\")",
+      "Bash(powershell -Command \":*)",
+      "Bash(./node_modules/.bin/next build:*)",
+      "Bash(node /c/cf24/mechy-home/node_modules/next/dist/bin/next build)",
+      "Bash(node node_modules/next/dist/bin/next build)",
+      "Bash(git init:*)",
+      "Bash(git config:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
+    ]
+  }
+}

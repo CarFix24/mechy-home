@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.kinetic-gradient {
+  background: linear-gradient(135deg, #0042c8 0%, #0056ff 100%);
+}
+
+.glass-nav {
+  background: rgba(252, 249, 248, 0.8);
+  backdrop-filter: blur(24px);
+}
