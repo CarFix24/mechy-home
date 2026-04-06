@@ -1,6 +1,4 @@
-const FORMSPREE_URL = process.env.NEXT_PUBLIC_FORMSPREE_URL ?? "#";
-
-export default function Home() {
+export default function Home({ searchParams }: { searchParams: { waitlist?: string } }) {
   return (
     <>
       {/* TopNavBar */}
@@ -39,7 +37,7 @@ export default function Home() {
               {/* Waitlist Form */}
               <form
                 id="waitlist"
-                action={FORMSPREE_URL}
+                action="/api/waitlist"
                 method="POST"
                 className="flex flex-col sm:flex-row gap-3 max-w-2xl"
               >
@@ -72,9 +70,17 @@ export default function Home() {
                   <span className="material-symbols-outlined text-base">arrow_forward</span>
                 </button>
               </form>
-              <p className="text-sm text-secondary mt-4">
-                Be the first to access our upcoming iOS and Android apps.
-              </p>
+              {searchParams.waitlist === 'success' && (
+                <p className="text-sm font-semibold text-green-600 mt-4">🎉 You&apos;re on the list! We&apos;ll be in touch soon.</p>
+              )}
+              {searchParams.waitlist === 'error' && (
+                <p className="text-sm font-semibold text-red-500 mt-4">Something went wrong. Please try again.</p>
+              )}
+              {!searchParams.waitlist && (
+                <p className="text-sm text-secondary mt-4">
+                  Be the first to access our upcoming iOS and Android apps.
+                </p>
+              )}
             </div>
 
             {/* Right: Hero Image */}
