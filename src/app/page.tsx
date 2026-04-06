@@ -19,60 +19,95 @@ export default function Home() {
       <main className="pt-24">
 
         {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center px-6 overflow-hidden bg-surface">
-          <div className="max-w-7xl mx-auto w-full flex flex-col items-center text-center z-10">
-            <h1 className="text-6xl md:text-8xl font-black font-headline text-on-background leading-[0.9] tracking-tighter mb-8">
-              Auto Repair,<br />
-              <span className="text-primary italic">Reinvented.</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-secondary max-w-2xl mb-12 leading-relaxed">
-              Say goodbye to waiting rooms and hidden markups. CarFix24 connects you directly
-              with top-tier mechanics for transparent, on-demand auto service at your doorstep.
-            </p>
+        <section className="relative min-h-[921px] flex items-center px-6 overflow-hidden bg-surface">
+          <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
-            {/* Waitlist Form */}
-            <form
-              action={FORMSPREE_URL}
-              method="POST"
-              className="w-full max-w-xl flex flex-col sm:flex-row gap-3"
-            >
-              <input type="hidden" name="_subject" value="CarFix24 Waitlist Signup" />
-              <div className="bg-surface-container-low rounded-xl px-4 py-2 flex items-center focus-within:ring-2 ring-primary/40 transition-all sm:w-1/3 flex-shrink-0">
-                <span className="material-symbols-outlined text-outline mr-2 text-base">person</span>
-                <select
-                  name="user_type"
-                  className="bg-transparent border-none focus:ring-0 w-full text-on-surface font-medium outline-none cursor-pointer text-sm"
-                >
-                  <option value="consumer">Car Owner</option>
-                  <option value="mechanic">Mechanic</option>
-                </select>
-              </div>
-              <div className="flex-grow bg-surface-container-low rounded-xl px-4 py-2 flex items-center focus-within:ring-2 ring-primary/40 transition-all">
-                <span className="material-symbols-outlined text-outline mr-3">mail</span>
-                <input
-                  className="bg-transparent border-none focus:ring-0 w-full text-on-surface placeholder:text-outline font-medium outline-none"
-                  placeholder="Enter your email address"
-                  type="email"
-                  name="email"
-                  required
-                />
-              </div>
-              <button
-                type="submit"
-                className="kinetic-gradient text-on-primary px-8 py-4 rounded-xl font-bold font-headline shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform active:scale-95 whitespace-nowrap flex items-center justify-center gap-2"
+            {/* Left: Content */}
+            <div className="lg:col-span-7 z-10">
+              <span className="inline-block px-4 py-1.5 bg-primary-fixed text-on-primary-fixed text-xs font-bold font-label tracking-widest uppercase rounded-full mb-6">
+                Coming Soon
+              </span>
+              <h1 className="text-6xl md:text-8xl font-black font-headline text-on-background leading-[0.9] tracking-tighter mb-8">
+                Auto Repair,<br />
+                <span className="text-primary italic">Reinvented.</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-secondary max-w-2xl mb-12 leading-relaxed">
+                Say goodbye to waiting rooms and hidden markups. CarFix24 connects you directly
+                with top-tier mechanics for transparent, on-demand auto service at your doorstep.
+              </p>
+
+              {/* Waitlist Form */}
+              <form
+                action={FORMSPREE_URL}
+                method="POST"
+                className="flex flex-col sm:flex-row gap-3 max-w-lg"
               >
-                Join Waitlist
-                <span className="material-symbols-outlined text-base">arrow_forward</span>
-              </button>
-            </form>
-            <p className="text-sm text-secondary mt-4">
-              Be the first to access our upcoming iOS and Android apps.
-            </p>
-          </div>
+                <input type="hidden" name="_subject" value="CarFix24 Waitlist Signup" />
+                <div className="bg-surface-container-low rounded-xl px-4 py-2 flex items-center focus-within:ring-2 ring-primary/40 transition-all">
+                  <span className="material-symbols-outlined text-outline mr-2 text-base">person</span>
+                  <select
+                    name="user_type"
+                    className="bg-transparent border-none focus:ring-0 w-full text-on-surface font-medium outline-none cursor-pointer text-sm"
+                  >
+                    <option value="consumer">Car Owner</option>
+                    <option value="mechanic">Mechanic</option>
+                  </select>
+                </div>
+                <div className="flex-grow bg-surface-container-low rounded-xl px-4 py-2 flex items-center focus-within:ring-2 ring-primary/40 transition-all">
+                  <span className="material-symbols-outlined text-outline mr-3">mail</span>
+                  <input
+                    className="bg-transparent border-none focus:ring-0 w-full text-on-surface placeholder:text-outline font-medium outline-none"
+                    placeholder="Enter your email"
+                    type="email"
+                    name="email"
+                    required
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="kinetic-gradient text-on-primary px-8 py-4 rounded-xl font-bold font-headline shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform active:scale-95 whitespace-nowrap flex items-center justify-center gap-2"
+                >
+                  Join Waitlist
+                  <span className="material-symbols-outlined text-base">arrow_forward</span>
+                </button>
+              </form>
+              <p className="text-sm text-secondary mt-4">
+                Be the first to access our upcoming iOS and Android apps.
+              </p>
+            </div>
 
-          {/* Decorative Elements */}
-          <div className="absolute -top-10 -right-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
-          <div className="absolute -bottom-10 -left-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+            {/* Right: Hero Image */}
+            <div className="lg:col-span-5 relative">
+              <div className="relative rounded-[2rem] overflow-hidden aspect-[4/5] shadow-2xl">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  className="w-full h-full object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuALS30BqSjDyhEpERkJOuiKiDoqv7IGGyHs66ftTcB01JDK_LjqbOKzV76cTR_NHJzmjEHtmLiuKxTcZb2AQ6oso7QySNNqhSE7KnyvQUUB-urDmA7vntBOgKefKgkYmNmCKsYE8lRbT-G8fVulB3aeYZbAUeGj1u2Bexk_89F9igdJgCCrc4o7JVlJAHeHgaeEt8lmYOfspagn5xr0X99-FBYfGd7rj1yUoxQ_TZqZDX6R-Ylw8YsOv5u78JRPcEzQEB1m4_BOFrUz"
+                  alt="Professional mechanic working on a luxury engine"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+                {/* Floating Diagnostic Card */}
+                <div className="absolute bottom-6 left-6 right-6 bg-surface-container-lowest/90 backdrop-blur-md p-6 rounded-2xl shadow-xl">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                      <span className="material-symbols-outlined text-primary">precision_manufacturing</span>
+                    </div>
+                    <div>
+                      <h4 className="font-headline font-bold text-on-surface">Engine Health Check</h4>
+                      <p className="text-xs text-secondary font-label">Real-time Diagnostic</p>
+                    </div>
+                  </div>
+                  <div className="w-full h-2 bg-surface-container-high rounded-full overflow-hidden">
+                    <div className="h-full kinetic-gradient w-[85%]"></div>
+                  </div>
+                </div>
+              </div>
+              {/* Decorative blurs */}
+              <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary/5 rounded-full blur-3xl"></div>
+              <div className="absolute -bottom-10 -left-10 w-60 h-60 bg-primary/10 rounded-full blur-3xl"></div>
+            </div>
+
+          </div>
         </section>
 
         {/* Problem & Solution Section */}
