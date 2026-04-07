@@ -1,4 +1,4 @@
-const FORMSPREE_URL = process.env.NEXT_PUBLIC_FORMSPREE_URL ?? "#";
+const FORMSPREE_URL = process.env.FORMSPREE_URL ?? "#";
 
 export default function Home() {
   return (
